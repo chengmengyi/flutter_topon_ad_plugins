@@ -18,7 +18,7 @@ A new Flutter project.
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
   s.static_framework = true
-  s.platform = :ios, '12.0'
+  s.platform = :ios, '14.0'
   
   #************************* Manual import ******************************#
 # s.frameworks = 'SystemConfiguration', 'CoreGraphics','Foundation','UIKit','AVFoundation','AdSupport','AudioToolbox','CoreMedia','StoreKit','SystemConfiguration','WebKit','AppTrackingTransparency','CoreMotion','CoreTelephony','MessageUI','SafariServices','WebKit','CoreMotion','JavaScriptCore','CoreLocation','MediaPlayer'
@@ -40,18 +40,19 @@ A new Flutter project.
 
    #podfile建议使用github源，文件顶部增加 source 'https://github.com/CocoaPods/Specs.git'
 
-s.dependency 'TPNiOS','6.4.27'
+s.dependency 'TPNiOS','6.4.88'
 
-s.dependency 'TPNGromoreSDKAdapter','6.4.27'
-s.dependency 'TPNTTSDKAdapter_Mix','6.4.27'
-s.dependency 'TPNBaiduSDKAdapter','6.4.27'
-s.dependency 'TPNKuaiShouSDKAdapter','6.4.27'
-s.dependency 'TPNGDTSDKAdapter','6.4.27'
+s.dependency 'TPNGromoreSDKAdapter','6.4.88'
+s.dependency 'TPNTTSDKAdapter_Mix','6.4.88'
+s.dependency 'TPNBaiduSDKAdapter','6.4.88'
+s.dependency 'TPNKuaiShouSDKAdapter','6.4.88'
+s.dependency 'TPNGDTSDKAdapter','6.4.88'
 
-s.dependency 'TPNAdmobSDKAdapter','6.4.27.1'
-s.dependency 'TPNMintegralSDKAdapter','6.4.27'
+s.dependency 'TPNAdmobSDKAdapter','6.4.88.1'
+s.dependency 'TPNMintegralSDKAdapter','6.4.88'
 
-s.dependency 'TPNDebugUISDK','1.0.3'
+s.dependency 'TPNDebugUISDK','1.0.6'
+
 
 #*************************************************************#
 

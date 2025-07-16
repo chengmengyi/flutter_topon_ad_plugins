@@ -41,6 +41,7 @@ class FlutterToponAdPlugins {
 
   _setTopListener(){
     ATListenerManager.interstitialEventHandler.listen((event) {
+      "flutter ios ad --->interstitialEventHandler--->--->${event.interstatus}-->${event.extraMap}".log();
       var adUnitId = event.placementID;
       switch (event.interstatus) {
       //广告加载失败
@@ -83,6 +84,7 @@ class FlutterToponAdPlugins {
       }
     });
     ATListenerManager.rewardedVideoEventHandler.listen((event) {
+      "flutter ios ad --->rewardedVideoEventHandler--->--->${event.rewardStatus}-->${event.extraMap}".log();
       var adUnitId = event.placementID;
       switch (event.rewardStatus) {
       //广告加载失败
@@ -206,12 +208,13 @@ class FlutterToponAdPlugins {
   AdRevenueBean? _createAdRevenueBean(String adUnitId, Map extraMap,){
     try{
       return AdRevenueBean(
-        revenue: extraMap["publisher_revenue"],
+        revenue: extraMap["publisher_revenue"] ?? 0,
         adUnitId: adUnitId,
-        networkName: extraMap["network_name"],
-        revenuePrecision: extraMap["precision"],
+        networkName: extraMap["network_name"]??"",
+        revenuePrecision: extraMap["precision"]??"",
       );
     }catch(e){
+      "flutter ios ad --->_createAdRevenueBean--->${e}".log();
       return null;
     }
   }
